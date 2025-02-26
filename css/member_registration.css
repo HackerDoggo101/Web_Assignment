@@ -1,0 +1,175 @@
+/* Author:Wong Yee En */
+@charset "UTF-8";
+
+section h1 {
+    
+    font-size: 2.5em;
+    color: #583937;
+    margin-bottom: 35px;
+    text-align: center;
+
+}
+
+section p#thanks {
+    line-height: 1.4em;
+    margin: 15px 0px;
+    text-align: center;
+    font-size: 1.2em;
+    
+ }
+
+div#buttons{
+    text-align: center;
+    width: 100%;
+}
+
+form input[type='submit'],input[type='reset'], form button{
+    font-size: 1.2em;
+    padding: 5px;
+    margin: 15px;
+    background-color: #583937;
+    color: white;
+}
+form input[type='submit']:hover,input[type='reset']:hover, form button:hover{
+    background-color: #E5BA73;
+    color: black;
+}
+
+form input[type='submit']:active,input[type='reset']:active, form button:active{
+    background-color: pink;
+}
+
+.register{
+    max-width: 620px;
+    width: 100%;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.register .title {
+    font-size: 2em;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+
+div.formRow {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 7px 0px; 
+    padding-left: 10px;
+    width: 100%;
+}
+
+div.formRow > *{
+    flex: 1 1 150px;
+}
+
+form#registerForm{
+    display: flex;
+    flex-flow: row wrap;
+    
+}
+
+form#registerForm > fieldset#addressInfo {
+    background-color: rgb(241,232,181);
+    border-radius: 20px;
+    font-size: 0.85em;
+    flex: 1 1 300px;
+    padding: 10px;
+    margin: 10px;
+    
+    
+}
+
+legend {
+    background-color:#583937 ;
+    color: white;
+    padding: 5px;
+}
+
+form .category {
+    display: flex;
+    width: 80%;
+    margin: 14px 0;
+    justify-content: space-between;
+}
+
+form .category label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+form .category label .dot {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background: #d9d9d9;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#dot-1:checked~.category label .one,
+#dot-2:checked~.category label .two,
+#dot-3:checked~.category label .three {
+    background: #9b59b6;
+    border-color: #d9d9d9;
+}
+
+form input[type="radio"] {
+    display: none;
+}
+
+.checkBox {
+    margin: 7px 0px; 
+    padding-left: 10px;
+}
+
+/* Validation Styles */
+form input#nameBox:focus,form input#phoneBox:focus,form input#emailBox:focus,form input#detailaddressBox:focus,form input#postalcode:focus,form input#state:focus,form input#birthday:focus, form textarea:focus, form select:focus {
+    background-color: rgb(255,255,180);
+ }
+
+
+input#nameBox:focus:valid, input#phoneBox:focus:valid,input#emailBox:focus:valid,input#detailaddress:focus:valid,input#postalcode:focus:valid{
+    background-color: rgb(220,255,220);
+    background-image: url("/images/okay.png");
+    background-position: right;
+    background-repeat: no-repeat;
+ }
+input#nameBox:focus:invalid, input#phoneBox:focus:invalid,input#emailBox:focus:invalid,input#detailaddress:focus:invalid,input#postalcode:focus:invalid {
+    background-color: rgb(255,230,230);
+    background-image: url("/images/warning.png");
+    background-position: right;
+    background-repeat: no-repeat;
+ }
+
+ /* Mobile Styles */
+@media only screen and (max-width: 480px) {
+    
+    .category {
+        display: flex;
+        width: 100%;
+        flex-flow: row wrap;
+    }
+    .category > * {
+        flex: 1 0 auto;
+        padding-top: 7px;
+    }
+    .formRow > * {
+        width: 220px;
+    }   
+    
+    section h1 {
+        font-size: 2.2em;
+    }
+
+}

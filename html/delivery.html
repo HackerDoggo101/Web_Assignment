@@ -1,0 +1,290 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Delivery</title>
+    <link rel="icon" href="/images/Logo.png" />
+    <link href="/css/reset.css" rel="stylesheet" />
+    <link href="/css/base.css" rel="stylesheet" />
+    <link href="/css/delivery.css" rel="stylesheet" />
+    <link href="/css/footer.css" rel="stylesheet" />
+    <link href="/css/chatbot.css" rel="stylesheet" />
+    <script src="/javascript/deliveryform.js"></script>
+    <script src="https://kit.fontawesome.com/a0b087c6f7.js" crossorigin="anonymous"></script>
+
+
+
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <div class="top_nav">
+                <div class="icons">
+                    <a href="/html/index.html"><img src="/images/Logo.png" alt="logo" class="logo" /></a>
+                    <img src="/images/Banner.png" alt="company banner" class="banner" />
+                    <img src="/images/Cart.png" alt="Cart" class="cart_logo" id="cart-icon" />
+                </div>
+
+                <div class="cart">
+                    <h2 class="cart-title">Your Cart</h2>
+                    <!-- content -->
+                    <div class="cart-content">
+
+                    </div>
+                    <!-- Total -->
+                    <div class="total">
+                        <div class="total-title">Total</div>
+                        <div class="total-price">RM0</div>
+                    </div>
+                    <!-- Buy Button -->
+                    <button type="button" class="button-buy" onclick="location.href='payment.html'">Buy Now</button>
+                    <!-- Cart Close -->
+                    <img src="/images/close.png" alt="close icon" id="close-cart" style="width: 15px;" />
+                </div>
+
+            </div>
+
+            <nav class="bottom_nav">
+                <a id="navicon" href="#"><img src="/images/navicon.png" alt="navigation icon" /></a>
+                <ul>
+                    <li>
+                        <a href="/html/index.html">Home</a>
+
+                    </li>
+                    <li>
+                        <a href="#">Menu</a>
+                        <ul class="dropdown">
+                            <li><a href="/html/menu_cakes.html">Cakes</a></li>
+                            <li><a href="/html/menu_custom_cakes.html">Custom Cakes</a></li>
+                            <li><a href="/html/menu_breads.html">Breads</a></li>
+                            <li><a href="/html/menu_pastries.html">Pastries</a></li>
+                            <li><a href="/html/menu_cookies.html">Cookies</a></li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/html/customer_feedback.html">Customer Feedback</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact Us</a>
+                        <ul class="dropdown">
+                            <li><a href="/html/about_us.html">About Us</a></li>
+                            <li><a href="/html/faq.html">FAQs</a></li>
+                            <li><a href="/html/location.html">Location</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">Other Services</a>
+                        <ul class="dropdown">
+                            <li><a href="/html/news&promotions.html">News & Promotions</a></li>
+                            <li><a href="/html/rewards.html">Rewards</a></li>
+                            <li><a href="/html/delivery.html">Delivery</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+        <!-- link to JS -->
+        <script src="/javascript/main.js"></script>
+    </header>
+
+    <!-- THE MAIN PART OF THE BODY IS STORED IN THIS SECTION -->
+    <section class="container">
+
+        <h1 class="section-title">Delivery</h1>
+
+        <hr>
+
+
+
+        <div class="dinformation">
+            <h1>Delicious baked goods delivered to your door!</h1>
+            <p>Welcome to our bakery shop delivery page! We offer delivery services for all of our baked goods,
+                including cakes, pastries, breads, and more.</p>
+
+            <h2>Delivery Information</h2>
+
+            <ul>
+                <li>We deliver within a 10-mile radius of our bakery shop. Delivery is available Monday-Saturday from
+                    9am-5pm.</li>
+                <li>Orders must be placed at least 24 hours in advance.</li>
+                <li>If you prefer to visit the nearest shop to pick up your purchases, you may also select the pickup
+                    option.</li>
+                <li>Delivery fees vary based on distance and order size. Please contact us for more information.</li>
+            </ul>
+
+            <h2>Ordering Process</h2>
+
+            <p>To place a delivery order, please fill out the form below:</p>
+            <br>
+            <hr>
+
+        </div>
+
+        <br>
+
+
+
+        <!-- delivery form -->
+        <form id="dform" action="/html/delivery_successful.html" method="get">
+
+
+
+            <div>
+                <label for="date">Date*:</label>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="datetime-local" required />
+            </div>
+
+
+            <div>
+                <label for="nameBox">Name*:</label>
+                <input type="text" id="nameBox" name="custName" placeholder="First and Last Name" pattern="[a-zA-Z\s]+"
+                    required />
+            </div>
+
+            <div>
+                <label for="phoneBox">Phone*:</label>
+                <input type="text" id="phoneBox" name="custPhone" placeholder="nnn-nnn nnnn"
+                    pattern="^\d{3}[-\s]?\d{3}[-\s]?\d{4}$" required />
+            </div>
+
+            <div>
+                <label for="emailBox">Email*:</label>
+                <input type="email" id="emailBox" name="custEmail" placeholder="Email" required />
+            </div>
+
+            <div>
+                <input type="radio" id="delivery" name="orderType" value="delivery" required />&nbsp&nbsp
+                <label for="delivery">Delivery</label>&nbsp&nbsp
+
+                <input type="radio" id="pickup" name="orderType" value="pickup" required />&nbsp&nbsp
+                <label for="pickup">Pickup</label>
+            </div>
+
+            <fieldset id="deliveryInfo">
+                <legend>Delivery Option</legend>
+                <br>
+                <textarea id="addressBox" name="delAddress" placeholder="Enter delivery address" required
+                    disabled></textarea>
+                <br>
+                <label for="delBox">
+                    Delivery Time (leave empty for earliest delivery) *choose only from 9am to 5pm
+                </label>
+                <input type="time" name="delTime" id="delBox" disabled />
+            </fieldset>
+
+            <fieldset id="pickupInfo">
+                <legend>Pickup Option</legend>
+                <br>
+                <label for="pickupBox">
+                    Pickup Time (leave empty for earliest pickup)<br> *remember to bring the receipt when pickup your
+                    goods.
+                </label><br>
+                <input type="time" name="pickupTime" id="pickupBox" disabled />
+            </fieldset>
+
+
+
+
+
+            <div>
+                &nbsp;&nbsp;
+                <input type="submit" id="submitbtn" value="Submit" />
+                &nbsp;&nbsp;
+                <input type="reset" value="Cancel Order" onclick="confirm('Cancel Order  ?')" />
+            </div>
+        </form>
+
+
+        <!--Chatbot-->
+        <div class="chatbot">
+            <!-- Header Button -->
+            <button id="chat-btn" class="chat-header">
+                <img src="/images/chat.png" alt="Chat Icon" height="20" />
+                <b>Chatbot</b>
+            </button>
+
+            <!-- Chatbox Body -->
+            <div class="chat-hide">
+                <div class="relative-container">
+                    <div class="absolute-container">
+                        <!-- initial messages -->
+                        <div class="chatbox">
+                            <p id="chat-time"><!-- time --></p>
+                            <p id="botStartMsg" class="botText"><!-- initial messages --></p>
+                        </div>
+
+                        <!-- input section -->
+                        <div class="chat-input">
+                            <div class="chat-input-inner">
+                                <!-- input box -->
+                                <div id="userInput">
+                                    <input type="text" id="textInput" class="inputBox"
+                                        placeholder="Enter your message here..." />
+                                    <p></p>
+                                </div>
+
+                                <!-- send button -->
+                                <div class="chat-send">
+                                    <img src="/images/send.png" alt="Send Icon" height="20" onclick="sendBtn(event)" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- display chatbot replies -->
+                        <div id="chatBar-btm">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <script src="/javascript/chatbot.js"></script>
+    <script src="/javascript/responses.js"></script>
+
+
+    <footer class="footer-content">
+        <div class="footer-header">
+            <div class="row">
+                <div class="col">
+                    <img src="/images/Logo.png" class="footer-logo" />
+                    <P>Sugar High Bakery promises a value lifestyle proposition of great variety and quality
+                        food at
+                        affordable prices. The uncompromising quality of food</P>
+                </div>
+                <div class="col">
+                    <h3>Contact Us <div class="underline"><span></span></div>
+                    </h3>
+                    <p class="email-id">Email: &nbsp &nbsp &nbsp &nbsp<a
+                            href="mailto: email@gmail.com">email@gmail.com</a></p>
+                    <p class="phone-id">Contact: &nbsp &nbsp <a href="tel: +60123456789">+60123456789</a></p>
+
+                    <h3>Follow Us <div class="underline"><span></span></div>
+                    </h3>
+                    <ul class="social_icons">
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-copyright">
+            <p>Copyright &copy; 2023 Sugar High Bakery.
+                All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

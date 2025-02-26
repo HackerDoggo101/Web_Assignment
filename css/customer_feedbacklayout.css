@@ -1,0 +1,414 @@
+@charset "UTF-8";
+
+.container.feedback {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    background: #fff;
+    padding: 25px 40px 10px 40px;
+}
+
+.container.testimonials {
+    width: 100%;
+    padding-right: 215px;
+    padding-left: 215px;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    background: #fff;
+    padding-bottom: 60px;
+}
+
+.box {
+    background-color: #f1f1f1;
+    padding: 20px;
+    font-size: 12px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.container .text {
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    background: -webkit-linear-gradient(right, var(--main-color), var(--bg-color), var(--main-color), var(--bg-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text{
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    background: #ffffff;
+    color: black;
+    padding: 20px;
+}
+
+.container form {
+    padding: 30px 0 0 0;
+}
+
+.container form .form-row {
+    display: flex;
+    margin: 32px 0;
+}
+
+form .form-row .input-data {
+    width: 100%;
+    height: 40px;
+    margin: 0 20px;
+    position: relative;
+}
+
+form .form-row .textarea {
+    height: 70px;
+}
+
+.input-data input,
+.textarea textarea {
+    display: block;
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 17px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+}
+
+.textarea textarea {
+    resize: none;
+    padding-top: 10px;
+}
+
+.input-data input:focus,
+.textarea textarea:focus {
+    outline: none;
+}
+
+
+.input-data input:focus~label,
+.textarea textarea:focus~label,
+.input-data input:valid~label,
+.textarea textarea:valid~label {
+    transform: translateY(-20px);
+    color: #3498db;
+    font-size: 14px;
+}
+
+.input-data label {
+    position: absolute;
+    bottom: 10px;
+    font-size: 16px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.textarea label {
+    width: 100%;
+    bottom: 40px;
+    background: #fff;
+}
+
+.input-data .underline {
+    position: absolute;
+    height: 2px;
+    bottom: 0;
+    width: 100%;
+}
+
+.input-data .underline:before,
+.input-data .underline:after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #3498db;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.input-data input:focus~.underline:before,
+.underline:after,
+.textarea textarea:focus~.underline:before,
+.underline:after,
+.input-data input:valid~.underline:before,
+.underline:after,
+.textarea textarea:valid~.underline:before,
+.underline:after {
+    transform: scaleX(1);
+}
+
+form .requirement {
+    width: 100%;
+    font-size: 0.9em;
+}
+
+form .requirement ul li {
+    margin-left: 18px;
+    text-align: left;
+}
+
+.submit-btn .input-data {
+    height: 45px !important;
+    width: 25% !important;
+    overflow: hidden;
+}
+
+.submit-btn .input-data .inner {
+    height: 100%;
+    width: 300%;
+    position: absolute;
+    left: -100%;
+    transition: all 0.3s;
+    background: -webkit-linear-gradient(right, var(--main-color), var(--bg-color), var(--main-color), var(--bg-color));
+}
+
+.submit-btn .input-data:hover .inner {
+    left: 0;
+}
+
+.submit-btn .input-data input {
+    position: relative;
+    z-index: 2;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+/*FOR MOBILE SCREENS*/
+@media only screen and (max-width: 480px) {
+    .container .text {
+        font-size: 2em;
+    }
+
+    .container form {
+        padding: 10px 0 0 0;
+    }
+
+    .container form .form-row {
+        display: block;
+    }
+
+    form .form-row .input-data {
+        margin: 35px 0 !important;
+    }
+
+    .submit-btn .input-data {
+        width: 40% !important;
+    }
+
+    form .requirement ul li {
+        margin-left: 0px;
+        text-align: left;
+        font-size: 0.9em;
+    }
+
+    form .fileupload .btn {
+        vertical-align: middle;
+        margin-left: 0px;
+    }
+
+    .hidden {
+        display: none;
+    }
+}
+
+.fileupload {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem !important;
+    margin-top: 1rem !important;
+}
+
+.fileupload .btn {
+    vertical-align: middle;
+    margin-left: 20px;
+}
+
+.fileupload .btn:hover {
+    color: white;
+    background: linear-gradient(115deg, var(--bg-color) 10%, var(--main-color) 90%);
+    transition: 0.3s ease;
+}
+
+.fileupload #cancel-btn {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.fileupload #cancel-btn:hover {
+    transform: translateY(-2px);
+}
+
+.file-chosen {
+    margin-left: 20px;
+}
+
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    user-select: none;
+    line-height: 1.5;
+}
+
+.btn-file {
+    overflow: hidden;
+    position: relative;
+}
+
+.btn-red-outline {
+    cursor: pointer;
+    font-size: 13px;
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px #00000070;
+}
+
+.btn-contact-us-attach {
+    bottom: 0;
+    padding: 12px 12px;
+    background: transparent;
+    place-self: center;
+}
+
+.btn-file>input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    transform: translate(-300px, 0) scale(4);
+    font-size: 23px;
+    direction: ltr;
+    cursor: pointer;
+}
+
+.box{
+    width: 100%;
+}
+
+.container .testimonial {
+    background: #fff;
+    padding: 30px;
+    height: 90vh;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.container .testimonial img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.container .name {
+    font-size: 24px;
+    text-transform: uppercase;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.container .stars {
+    font-size: 20px;
+    color: #6ab04c;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.container .testimonial p {
+    font-size: 1rem;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+#message1 {
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.hidden {
+    display: none;
+}
+
+/*FOR SMALLER LAPTOP SCREENS*/
+/*@media only screen and (max-width: 1700px) {
+    .container.testimonials {
+        grid-template-columns: repeat(3, 1fr);
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+
+    .container .testimonial {
+        background: #fff;
+        padding: 30px;
+        height: 50vh;
+        border-radius: 25px;
+        text-align: center;
+    }
+
+    .container .testimonial p {
+        font-size: 14px;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+}*/
+
+/*FOR TABLET SCREENS*/
+@media only screen and (max-width: 800px) {
+    .container.testimonials {
+        grid-template-columns: repeat(1, 1fr);
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .container .testimonial {
+        background: #fff;
+        padding: 30px;
+        height: 50vh;
+        border-radius: 25px;
+        text-align: center;
+    }
+
+    .container .testimonial p {
+        font-size: 16px;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+}
+
+/*FOR MOBILE SCREENS*/
+@media only screen and (max-width: 480px) {
+    .container.testimonials {
+        grid-template-columns: repeat(1, 1fr);
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .container .testimonial {
+        background: #fff;
+        padding: 30px;
+        height: 65vh;
+        border-radius: 25px;
+        text-align: center;
+    }
+
+}

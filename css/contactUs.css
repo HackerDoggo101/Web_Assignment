@@ -1,0 +1,144 @@
+body{
+  font-family: Arial, sans-serif;
+  background-color: #f6f6f6;
+}
+  
+  
+h1 {
+  margin: 0;
+}
+  
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+  
+form {
+  flex-basis: 60%;
+}
+  
+label {
+  display: inline-block;
+  margin-top: 20px;
+}
+  
+#text{
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: darkslategrey;
+  text-align: center;
+}
+
+.section-title{
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea{
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+  
+input[type="submit"] {
+  background-color: #f88f4f;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+  
+input[type="submit"]:hover {
+  background-color: #ffaa77;
+}
+  
+#contact-info {
+  margin: auto;
+  width: 50%;
+  flex-basis: 35%;
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 20px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+#contact-info li{
+  margin: auto;
+  width: 45%;
+  
+}
+
+#contact-info #socialmedia p{
+  padding: 3px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 2px solid black;
+  
+}
+
+hr{
+  border: 1px solid black;
+}
+
+  
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+  
+  
+h2 {
+  margin-top: 0;
+}
+
+/* Validation Styles */
+input:focus, textarea:focus , select:focus{
+  background-color: rgb(255,255,180);
+}
+
+input#name:focus:valid,input#email:focus:valid{
+  background-color: rgb(220,255,220);
+  background-image: url("/images/okay.png");
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+input#name:focus:invalid,input#email:focus:invalid{
+  background-color: rgb(255,230,230);
+  background-image: url("/images/warning.png");
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 480px) {
+  #contact-info{
+    width: 100%;
+  }
+  
+
+
+}
+/* =============================================
+ Tablet and Desktop Styles: greater than 481px
+ =============================================
+*/
+
+@media only screen and (min-width: 481px) {
+  
+  
+
+}

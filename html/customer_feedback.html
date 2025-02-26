@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Customer Feedback</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image" href="/images/Logo.png">
+    <link href="/css/reset.css" rel="stylesheet" />
+    <link href="/css/base.css" rel="stylesheet" />
+    <link href="/css/customer_feedbacklayout.css" rel="stylesheet" />
+    <link href="/css/footer.css" rel="stylesheet" />
+    <link href="/css/chatbot.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/a0b087c6f7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <button onclick="topFunction()" id="myBtn"><img src="/images/up-arrow.png"></button>
+    <header>
+        <div class="nav">
+            <div class="top_nav">
+                <div class="icons">
+                    <a href="/html/index.html"><img src="/images/Logo.png" alt="logo" class="logo" /></a>
+                    <img src="/images/Banner.png" alt="company banner" class="banner" />
+                    <img src="/images/Cart.png" alt="Cart" class="cart_logo" id="cart-icon" />
+                </div>
+                <div class="cart">
+                    <h2 class="cart-title">Your Cart</h2>
+                    <!-- content -->
+                    <div class="cart-content">
+
+                    </div>
+                    <!-- Total -->
+                    <div class="total">
+                        <div class="total-title">Total</div>
+                        <div class="total-price">RM0</div>
+                    </div>
+                    <!-- Buy Button -->
+                    <button type="button" class="button-buy" onclick="location.href='payment.html'">Buy Now</button>
+                    <!-- Cart Close -->
+                    <img src="/images/close.png" alt="close icon" id="close-cart" style="width: 15px;">
+                </div>
+
+            </div>
+
+            <nav class="bottom_nav">
+                <a id="navicon" href="#"><img src="/images/navicon.png" alt="" /></a>
+
+                <ul>
+                    <li>
+                        <a href="/html/index.html">Home</a>
+
+                    </li>
+                    <li>
+                        <a href="#">Menu</a>
+                        <ul class="dropdown">
+                            <li><a href="/html/menu_cakes.html">Cakes</a></li>
+                            <li><a href="/html/menu_custom_cakes.html">Custom Cakes</a></li>
+                            <li><a href="/html/menu_breads.html">Breads</a></li>
+                            <li><a href="/html/menu_pastries.html">Pastries</a></li>
+                            <li><a href="/html/menu_cookies">Cookies</a></li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/html/customer_feedback.html">Customer Feedback</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact Us</a>
+                        <ul class="dropdown">
+                            <li><a href="/html/about_us.html">About Us</a></li>
+                            <li><a href="/html/faq.html">FAQs</a></li>
+                            <li><a href="/html/location.html">Location</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">Other Services</a>
+                        <ul class="dropdown">
+                            <li><a href="/html/news&promotions.html">News & Promotions</a></li>
+                            <li><a href="/html/rewards.html">Rewards</a></li>
+                            <li><a href="/html/delivery.html">Delivery</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+        <!-- link to JS -->
+        <script src="/javascript/main.js"></script>
+
+    </header>
+    <div class="container feedback">
+        <form id="form" onsubmit="return submitForm()">
+            <div class="text">Customer Feedback Form</div>
+            <div id="message1" class="hidden">Thank you for your feedback! Our Customer Service will contact you
+                within 3
+                working days.</div>
+            <div class="form-row">
+                <div class="input-data">
+                    <input type="text" id="Fname" required>
+                    <div class="underline"></div>
+                    <label>First Name</label>
+                </div>
+                <div class="input-data">
+                    <input type="text" id="Lname" required>
+                    <div class="underline"></div>
+                    <label>Last Name</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-data">
+                    <input type="email" id="email" required>
+                    <div class="underline"></div>
+                    <label>Email Address</label>
+                </div>
+                <div class="input-data">
+                    <input type="tel" id="pHnum" pattern="^\d{3}[-\s]?\d{3}[-\s]?\d{4}$" required>
+                    <div class="underline"></div>
+                    <label>Phone Number (nnn-nnn nnnn)</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-data textarea">
+                    <textarea id="msg" cols="30" rows="10" required></textarea>
+                    <div class="underline"></div>
+                    <label>Write Your Message</label>
+                </div>
+            </div>
+            <div class="form-row fileupload fileupload-exists">
+                <input type="hidden" value="name">
+                <span id="custom-btn" class="btn btn-red-outline btn-contact-us-attach btn-file">
+                    ATTACHMENT
+                    <input id="default-btn" type="file" id="fileinput">
+                </span>
+                <div class="file-chosen">
+                    <ul></ul>
+                </div>
+                <div id="cancel-btn" style="display: none"><i class="fas fa-xmark"></i></div>
+            </div>
+            <div class="form-row requirement">
+                <ul>
+                    <li>Max File Size: 7MB</li>
+                    <li>Formats: jpg, jpeg, png, gif, bmp, tiff, pdf, doc, docx, ppt</li>
+                </ul>
+            </div>
+            <div class="form-row submit-btn">
+                <div class="input-data">
+                    <div class="inner"></div>
+                    <input type="submit" value="submit">
+                </div>
+            </div>
+        </form>
+    </div>
+    <hr>
+    <div class="text">Testimonials</div>
+    <div class="container testimonials">
+
+        <div class="box">
+            <div class="testimonial">
+                <img src="/images/customer2.jpg" alt="" />
+                <div class="name">Nick Jonas</div>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+
+                <p>
+                    This bakery has the best bread in town! Their sourdough is tangy and perfectly
+                    crusty on
+                    the outside, while soft and chewy on the inside. I also love their cinnamon raisin
+                    bread
+                    - it's the perfect breakfast treat!
+                </p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="testimonial">
+                <img src="/images/customer1.jpg" alt="" />
+                <div class="name">Alex Borris</div>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+                <p>
+                    I recently visited this bakery and was blown away by the delicious pastries and
+                    friendly
+                    staff! The croissants were buttery and flaky, and the macarons were
+                    melt-in-your-mouth
+                    delicious. Highly recommend this bakery!
+                </p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="testimonial">
+                <img src="/images/customer3.jpg" alt="" />
+                <div class="name">Joana Sins</div>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p>
+                    I ordered a custom cake for my daughter's birthday from this bakery, and it turned
+                    out
+                    absolutely stunning! The buttercream frosting was light and fluffy, and the cake
+                    itself
+                    was moist and delicious. My daughter was thrilled with the results!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!--Chatbot-->
+    <div class="chatbot">
+        <!-- Header Button -->
+        <button id="chat-btn" class="chat-header">
+            <img src="/images/chat.png" alt="Chat Icon" height="20" />
+            <b>Chatbot</b>
+        </button>
+
+        <!-- Chatbox Body -->
+        <div class="chat-hide">
+            <div class="relative-container">
+                <div class="absolute-container">
+                    <!-- initial messages -->
+                    <div class="chatbox">
+                        <p id="chat-time"><!-- time --></p>
+                        <p id="botStartMsg" class="botText"><!-- initial messages --></p>
+                    </div>
+
+                    <!-- input section -->
+                    <div class="chat-input">
+                        <div class="chat-input-inner">
+                            <!-- input box -->
+                            <div id="userInput">
+                                <input type="text" id="textInput" class="inputBox"
+                                    placeholder="Enter your message here..." />
+                                <p></p>
+                            </div>
+
+                            <!-- send button -->
+                            <div class="chat-send">
+                                <img src="/images/send.png" alt="Send Icon" height="20" onclick="sendBtn(event)" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- display chatbot replies -->
+                    <div id="chatBar-btm">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/javascript/chatbot.js"></script>
+    <script src="/javascript/responses.js"></script>
+
+
+    <footer class="footer-content">
+        <div class="footer-header">
+            <div class="row">
+                <div class="col">
+                    <img src="/images/Logo.png" class="footer-logo" />
+                    <P>Sugar High Bakery promises a value lifestyle proposition of great variety and quality
+                        food at
+                        affordable prices. The uncompromising quality of food</P>
+                </div>
+                <div class="col">
+                    <h3>Contact Us <div class="underline"><span></span></div>
+                    </h3>
+                    <p class="email-id">Email: &nbsp &nbsp &nbsp &nbsp<a
+                            href="mailto: email@gmail.com">email@gmail.com</a></p>
+                    <p class="phone-id">Contact: &nbsp &nbsp <a href="tel: +60123456789">+60123456789</a></p>
+
+                    <h3>Follow Us <div class="underline"><span></span></div>
+                    </h3>
+                    <ul class="social_icons">
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-copyright">
+            <p>Copyright &copy; 2023 Sugar High Bakery.
+                All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+<script>
+    // Get the file input element
+    const fileInput = document.getElementById("default-btn");
+
+    // Get the cancel button element
+    const cancelButton = document.getElementById("cancel-btn");
+
+    // Add an event listener to the file input element
+    fileInput.addEventListener("change", function () {
+        // Get the selected file name
+        const fileName = fileInput.files[0].name;
+
+        // Display the selected file name on the screen
+        const fileChosen = document.querySelector(".file-chosen ul");
+        fileChosen.innerHTML = `<li>${fileName}</li>`;
+
+        // Show or hide the cancel button
+        if (fileInput.value) {
+            cancelButton.style.display = "inline";
+        } else {
+            cancelButton.style.display = "none";
+        }
+    });
+
+    // Add an event listener to the cancel button element
+    cancelButton.addEventListener("click", function () {
+        // Clear the file input value and hide the cancel button
+        fileInput.value = "";
+        cancelButton.style.display = "none";
+
+        // Remove the selected file name from the screen
+        const fileChosen = document.querySelector(".file-chosen ul");
+        fileChosen.innerHTML = "";
+    });
+</script>
+
+<script>
+
+    function resetForm() {
+        // get the form element and reset its values
+        document.getElementById("form").reset();
+        // clear the file chosen by resetting the value of the file input element
+        document.getElementById("default-btn").value = "";
+        // hide the cancel button
+        document.getElementById("cancel-btn").style.display = "none";
+        // clear the list of chosen files
+        document.querySelector(".file-chosen ul").innerHTML = "";
+    }
+
+    function submitForm() {
+        // code for submitting the form here
+        // display success message
+        document.getElementById("message1").classList.remove("hidden");
+        // reset the form
+        resetForm();
+        window.scrollTo(0, 0);
+        setTimeout(() => {
+            document.getElementById("message1").classList.add("hidden");
+        }, 4000);
+        // prevent the page from reloading
+        return false;
+    }
+
+</script>
+
+<script>
+    const toggleBtn = document.querySelector('.toggle_btn')
+    const toggleBtnIcon = document.querySelector('.toggle_btn i')
+    const dropDownMenu = document.querySelector('.dropdown_menu')
+
+    toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle('open')
+        const isOpen = dropDownMenu.classList.contains('open')
+
+        toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+    }
+</script>
+
+</html>

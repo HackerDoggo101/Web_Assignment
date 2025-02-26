@@ -1,0 +1,338 @@
+/* Author: Wong Yee En */
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Delicious Handrawn';
+    src: url(/font/delicious-handrawn-v3-latin-regular.woff) format('woff'),
+        url(/font/delicious-handrawn-v3-latin-regular.ttf) format('ttf');
+}
+
+@font-face {
+    font-family: 'Alkatra';
+    src: url(/font/alkatra-v3-latin-regular.woff) format('woff'),
+        url(/font/alkatra-v3-latin-regular.ttf) format('ttf');
+}
+
+/* FAQ title styles starts*/
+.hero {
+    width: 100%;
+    height: 450px;
+    /* dark colour on complete webpage*/
+    background-color: #583937;
+    padding-top: 200px;
+    margin-top: 0 !important;
+    border-radius: 20px;
+}
+
+.title {
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.title h1 {
+    font-size: 50px;
+    font-weight: 500;
+    font-family: 'Alkatra';
+    position: relative;
+    z-index: 10;
+
+}
+
+.back-text {
+    width: max-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.back-text span {
+    display: inline-block;
+    font-size: 250px;
+    font-weight: 700;
+    font-family: 'Alkatra';
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+    -webkit-text-fill-color: transparent;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 1s, opacity 0.5s, -webkit-text-stroke-color 0.5s;
+}
+
+.back-text span.active {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.back-text span:nth-child(1) {
+    transition-delay: 0.5s;
+}
+
+.back-text span:nth-child(2) {
+    transition-delay: 1s;
+}
+
+.back-text span:nth-child(3) {
+    transition-delay: 1.5s;
+}
+
+.back-text span:nth-child(4) {
+    transition-delay: 2s;
+}
+
+.back-text span:nth-child(5) {
+    transition-delay: 2.5s;
+}
+
+.back-text:hover span {
+    -webkit-text-stroke-color: #e8ffcd;
+}
+
+/* FAQ title styles end*/
+
+/* Card Rotations styles start */
+
+.topFaq h2 {
+    font-size: 10em;
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Delicious Handrawn';
+    border-bottom: 3px solid gray;
+}
+
+.cardRotation {
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.card-container {
+    width: 300px;
+    height: 400px;
+    position: relative;
+    perspective: 1000px;
+
+}
+
+.cover,
+.back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform .25s ease-in-out;
+    display: flex;
+    align-items: center;
+    border-radius: 0.4rem;
+    box-shadow: 0.2rem .5rem rba(0, 0, 0, .18);
+    text-shadow: 0 .15rem .2rem rgba(0, 0, 0, .2);
+
+}
+
+.cover {
+    transform: rotatey(0deg);
+    background-color: #583937;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.cover p, .back p  {
+    line-height: 1.5;
+    font-size:1.5rem;
+}
+
+
+
+.card-container:hover .cover {
+    transform: rotatey(180deg);
+}
+
+.back {
+    transform: rotatey(-180deg);
+    background-color: #E5BA73;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 5px solid black;
+}
+
+.card-container:hover .back {
+    transform: rotatey(0deg);
+}
+
+/* Card Rotations styles end */
+
+
+/* FAQ styles */
+.faqtitle {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.faqtitle img {
+    width: 20%;
+    height: 20%;
+    margin-right: 3vh;
+}
+
+.faqtitle h2 {
+    font-size: 10em;
+    font-family: 'Delicious Handrawn';
+}
+
+.faqcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.accordian {
+    max-width: 800px;
+}
+
+.accordian .contentBx {
+    position: relative;
+    margin: 10px 20px;
+
+}
+
+.accordian .contentBx .label {
+    position: relative;
+    padding: 10px;
+    background-color: #583937;
+    color: #fff;
+    cursor: pointer;
+}
+
+.accordian .contentBx .label::before {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.accordian .contentBx.active .label::before {
+    content: '-';
+}
+
+.accordian .contentBx .content {
+    position: relative;
+    background: #E5BA73;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+    font-weight: 550;
+
+}
+
+.accordian .contentBx.active .content {
+    height: 150px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+div#sound {
+    background-color: #583937;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 220px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+#sound h2{
+    text-align: center;
+    color: white;
+    font-size: 1.6rem;
+}
+
+#sound audio{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/* Mobile styles */
+
+@media only screen and (max-width: 480px) {
+
+    .title h1 {
+        font-size: 3vh;
+    }
+
+    .back-text span {
+        display: inline-block;
+        font-size: 18vh;
+    }
+
+    .hero {
+        height: 30vh;
+        padding-top: 30%;
+
+    }
+
+    /*Card rotation styles*/
+    .topFaq h2 {
+        font-size: 10vh;
+        margin-top: 6%;
+        margin-bottom: 6%;
+    }
+
+    .cardRotation {
+        margin-bottom: 60%;
+    }
+
+    .card-container {
+        height: 40%;
+        margin-bottom: 10%;
+    }
+
+    .cover p, .back p  {
+        font-size:1.2rem;
+    }
+
+
+    .faqtitle {
+        margin-top: 10%;
+    }
+
+    .faqtitle img {
+        width: 30%;
+        height: 15%;
+        margin-right: 3vh;
+    }
+
+    .faqtitle h2 {
+        font-size: 10vh;
+        padding-top: 40px;
+    }
+
+
+    /* Audio Styles */
+    div#sound{
+        width: 90%;
+        height: 200px;
+    }
+
+    #sound audio{
+        width: 200px;
+    }
+    #sound h2{
+        font-size:1.2rem;
+    }
+
+    
+}

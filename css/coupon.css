@@ -1,0 +1,179 @@
+/* Author:Wong Yee En */
+@charset "utf-8";
+
+/* Word exchange styles starts */
+:root {
+    --offset: 6px;
+}
+section h1 {
+    font-size: 3.5em;
+    color: #583937;
+    margin-bottom: 35px;
+    text-align: center;
+}
+.wordXchg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10%;
+    padding: 1%;
+
+}
+
+.wordXchg h2 {
+    width: 980px;
+    font-size: 100px;
+    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+    line-height: 1.06;
+    letter-spacing: -0.02em;
+    color: #1d1d1f;
+
+}
+
+.mask {
+    height: 110px;
+    position: relative;
+    overflow: hidden;
+    margin-top: var(--offset);
+}
+
+.mask span {
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    top: 110px;
+    padding-bottom: var(--offset);
+
+    background-size: 100% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-repeat: no-repeat;
+}
+
+.mask span[data-show] {
+    transform: translateY(-100%);
+    transition: .5s transform ease-in-out;
+}
+
+.mask span[data-up] {
+    transform: translateY(-200%);
+    transition: .5s transform ease-in-out;
+}
+
+.mask span:nth-child(1) {
+    background-image: linear-gradient(45deg, #0ecffe 50%, #07a6f1);
+}
+
+.mask span:nth-child(2) {
+    background-image: linear-gradient(45deg, #18e198 50%, #0ec15d);
+}
+
+.mask span:nth-child(3) {
+    background-image: linear-gradient(45deg, #8a7cfb 50%, #633e9c);
+}
+
+.mask span:nth-child(4) {
+    background-image: linear-gradient(45deg, #fa7671 50%, #f45f7f);
+}
+
+/* Word exchange styles end */
+.flex {
+    text-align: center;
+    box-sizing: border-box;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+
+.coupon {
+    border: 5px dotted #bbb;
+    /* Dotted border */
+    border-radius: 15px;
+    /* Rounded border */
+    flex: 1 0 21%;
+    width: 100%;
+    margin: 10px 0 0 2%;
+    min-width: 150px;
+    display: inline-block;
+
+}
+
+.Couponcontainer {
+    padding: 10%;
+    background-color: #f1f1f1;
+
+}
+
+.Couponcontainer p {
+    line-height: 2;
+}
+
+.promo {
+    background: #ccc;
+    padding: 3px;
+}
+
+.expire {
+    color: red;
+}
+
+.Couponcontainer h3 {
+    display: block;
+    font-size: 1.17em;
+    font-weight: bold;
+}
+
+.Descontainer{
+    height: 140px;
+}
+
+.Descontainer h2 {
+    height: 40px;
+    padding-top: 20px;
+}
+
+.Descontainer p {
+    padding-top: 10%;
+    padding-bottom: 0px;
+}
+
+
+.redeem {
+    text-align: center;
+    font-size: 28px;
+    line-height: 1.5;
+    letter-spacing: 0;
+
+}
+
+.music {
+    display: none;
+}
+/* Mobile styles */
+@media only screen and (max-width: 480px) {
+
+    .wordXchg h2 {
+        font-size: 5vh;
+    }
+
+    .mask {
+        height: 45px;
+        margin-top: 5px;
+    }
+
+    .mask span {
+        top: 50px;
+    }
+
+    section h1 {
+        font-size: 2.2em;
+    }
+
+    .redeem {
+        font-size: 1.2em;
+    }
+
+
+}

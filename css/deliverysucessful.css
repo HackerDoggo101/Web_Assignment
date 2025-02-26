@@ -1,0 +1,160 @@
+@charset "utf-8";
+
+input[type="radio"]::after{
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: white;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid black;
+}
+ 
+input[type="radio"]:checked::after{
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: black;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+ }
+
+#deliveryanimation{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    animation: mymove 5s infinite;
+}
+
+#pickupanimation{
+    width: 200px;
+    height: 260px;
+    position: relative;
+    animation: mymove 5s infinite;
+}
+ 
+@keyframes mymove {
+    from {left: -800px;}
+    to {left: -200px;}
+}
+
+@media only screen and (max-width: 480px) {
+    
+    .container input[type="text"] , input[type="email"] {
+       height: 50px;
+       width: 250px;
+       margin: 10px;
+    }
+ 
+    input[type="submit"] , input[type="reset"] {
+       height: 50px;
+       width: 100px;
+    }
+ 
+    #deliveryanimation{
+       width: 100px;
+       height: 100px;
+       position: relative;
+       animation: mymove 6s infinite;
+    }
+
+    #pickupanimation{
+        width: 100px;
+        height: 100px;
+        position: relative;
+        animation: mymove 6s infinite;
+    }
+     
+    @keyframes mymove {
+       from {left: -400px;}
+       to {left: -100px;}
+    }
+ 
+    #road {
+       max-width: 50%;
+       height: 100px;
+    }
+
+    #house {
+        max-width: 25%;
+        height: 100px;
+    }
+
+    #bakeryshop{
+        max-width: 25%;
+        height: 100px;
+    }
+
+    #deliveryanimation{
+        max-width: 20%;
+        height: 100px;
+    }
+
+    #pickupanimation{
+        max-width: 20%;
+        height: 100px;
+    }
+ 
+ 
+   
+    
+}
+ /* =============================================
+   Tablet and Desktop Styles: greater than 640px
+   =============================================
+ */
+ 
+@media only screen and (min-width: 481px) {
+    #deliveryanimation{
+        width: 200px;
+        height: 200px;
+        position: relative;
+        animation: mymove 5s infinite;
+    }
+    
+
+    
+      
+    @keyframes mymove {
+        from {left: -750px;}
+        to {left: -200px;}
+    }
+  
+    #road {
+        max-width: 60%;
+        height: 250px;
+    }
+ 
+    #house {
+        max-width: 30%;
+        height: 250px;
+    }
+
+    #bakeryshop{
+        max-width: 30%;
+        height: 250px;
+    }
+
+    
+ 
+    #deliveryanimation{
+        max-width: 10%;
+        height: 200px;
+    }
+
+    #pickupanimation{
+        max-width: 10%;
+        height: 260px;
+    }
+
+
+}

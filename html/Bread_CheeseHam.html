@@ -1,0 +1,234 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image" href="/images/Logo.png">
+    <title>Sugar High Bakery</title>
+    <link href="/css/reset.css" rel="stylesheet" />
+    <link href="/css/base.css" rel="stylesheet" />
+    <link href="/css/item_description.css" rel="stylesheet" />
+    <link href="/css/footer.css" rel="stylesheet" />
+    <link href="/css/chatbot.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/a0b087c6f7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <button onclick="topFunction()" id="myBtn"><img src="/images/up-arrow.png"></button>
+    <header>
+        <div class="nav">
+            <div class="top_nav">
+                <div class="icons">
+                    <a href="/html/index.html"><img src="/images/Logo.png" alt="logo" class="logo" /></a>
+                    <img src="/images/Banner.png" alt="company banner" class="banner" />
+                    <img src="/images/Cart.png" alt="Cart" class="cart_logo" id="cart-icon" />
+                </div>
+
+                <div class="cart">
+                    <h2 class="cart-title">Your Cart</h2>
+                    <!-- content -->
+                    <div class="cart-content">
+
+                    </div>
+                    <!-- Total -->
+                    <div class="total">
+                        <div class="total-title">Total</div>
+                        <div class="total-price">RM0</div>
+                    </div>
+                    <!-- Buy Button -->
+                    <button type="button" class="button-buy" onclick="location.href='payment.html'">Buy Now</button>
+                    <!-- Cart Close -->
+                    <img src="/images/close.png" alt="close icon" id="close-cart" style="width: 15px;" />
+                </div>
+
+            </div>
+
+            <nav class="bottom_nav">
+                <a id="navicon" href="#"><img src="/images/navicon.png" alt="navigation icon" /></a>
+                <ul>
+                    <li>
+                        <a href="/html/index.html">Home</a>
+
+                    </li>
+                    <li>
+                        <a href="#">Menu</a>
+                        <ul class="dropdown">
+                            <li><a href="/html/menu_cakes.html">Cakes</a></li>
+                            <li><a href="/html/menu_custom_cakes.html">Custom Cakes</a></li>
+                            <li><a href="/html/menu_breads.html">Breads</a></li>
+                            <li><a href="/html/menu_pastries.html">Pastries</a></li>
+                            <li><a href="/html/menu_cookies.html">Cookies</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/html/customer_feedback.html">Customer Feedback</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact Us</a>
+                        <ul class="dropdown">
+                            <li><a href="/html/about_us.html">About Us</a></li>
+                            <li><a href="/html/faq.html">FAQs</a></li>
+                            <li><a href="/html/location.html">Location</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">Other Services</a>
+                        <ul class="dropdown">
+                            <li><a href="/html/news&promotions.html">News & Promotions</a></li>
+                            <li><a href="/html/rewards.html">Rewards</a></li>
+                            <li><a href="/html/delivery.html">Delivery</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+        <!-- link to JS -->
+        <script src="/javascript/main.js"></script>
+    </header>
+
+    <!-- THE MAIN PART OF THE BODY IS STORED IN THIS SECTION -->
+    <section class="container">
+        <div class="item ">
+            <div class="product-box">
+                <img src="/images/Bread_CheeseHam.jpg" alt="Cheese Ham Bread" class="product-image" />
+                <h2 class="product-title">Cheese Ham</h2>
+                <span class="price">RM4</span>
+                <img src="/images/add-to-cart.png" alt="add-to-cart" class="add-cart ">
+            </div>
+            
+            <div class="stats">
+                
+                FLOUR : 7/10
+                <br />
+                SUGAR : 5/10
+                <br />
+                TASTE : 8/10
+
+
+            </div>
+        </div>
+
+
+
+
+        <p class="desc">
+            <strong>Cheese ham bread</strong> is a delicious and savory dish that combines three of the most beloved
+            foods: bread, cheese, and ham. It is a classic recipe that has been enjoyed by people all over the world for
+            many years.
+            <br />
+            <br />
+            The base of the dish is a fresh loaf of bread, which can be either white or whole wheat, depending on your
+            preference. The bread is sliced and then layered with slices of high-quality ham, such as prosciutto or
+            black forest ham. The ham adds a salty and savory flavor to the dish, which perfectly complements the other
+            ingredients.
+            <br />
+            <br />
+            Next, a generous amount of grated cheese is sprinkled over the top of the ham. The type of cheese used can
+            vary depending on your taste and availability, but some popular options include cheddar, Swiss, or Gouda.
+            The cheese adds a creamy and tangy flavor to the bread, and also helps to bind the ham and bread together.
+            <br />
+            <br />
+            Once the ham and cheese are layered on the bread, the whole thing is baked in the oven until the cheese is
+            melted and bubbly and the bread is toasted and crispy. This step is important because it helps to meld all
+            the flavors together and creates a deliciously gooey and crispy texture.
+            <br />
+            <br />
+            Cheese ham bread is a versatile dish that can be served in a variety of ways. It can be enjoyed as a main
+            course for lunch or dinner, or cut into smaller pieces and served as an appetizer or snack. It can also be
+            served hot or cold, depending on your preference.
+            <br />
+            <br />
+            Overall, cheese ham bread is a delicious and comforting dish that is perfect for any occasion. Whether you
+            are looking for a quick and easy lunch, or a hearty and satisfying dinner, cheese ham bread is sure to hit
+            the spot.
+
+        </p><!--Chatbot-->
+        <div class="chatbot">
+           <!-- Header Button -->
+           <button id="chat-btn" class="chat-header">
+               <img src="/images/chat.png" alt="Chat Icon" height="20" />
+               <b>Chatbot</b>
+           </button>
+
+           <!-- Chatbox Body -->
+           <div class="chat-hide">
+               <div class="relative-container">
+                   <div class="absolute-container">
+                       <!-- initial messages -->
+                       <div class="chatbox">
+                           <p id="chat-time"><!-- time --></p>
+                           <p id="botStartMsg" class="botText"><!-- initial messages --></p>
+                       </div>
+
+                       <!-- input section -->
+                       <div class="chat-input">
+                           <div class="chat-input-inner">
+                               <!-- input box -->
+                               <div id="userInput">
+                                   <input type="text" id="textInput" class="inputBox"
+                                       placeholder="Enter your message here..." />
+                                   <p></p>
+                               </div>
+
+                               <!-- send button -->
+                               <div class="chat-send">
+                                   <img src="/images/send.png" alt="Send Icon" height="20" onclick="sendBtn(event)" />
+                               </div>
+                           </div>
+                       </div>
+
+                       <!-- display chatbot replies -->
+                       <div id="chatBar-btm">
+                           <p></p>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+       
+
+    </section>
+    <script src="/javascript/chatbot.js"></script>
+    <script src="/javascript/responses.js"></script>
+    
+    <footer class="footer-content">
+        <div class="footer-header">
+            <div class="row">
+                <div class="col">
+                    <img src="/images/Logo.png" class="footer-logo" z />
+                    <P>Sugar High Bakery promises a value lifestyle proposition of great variety and quality
+                        food at
+                        affordable prices. The uncompromising quality of food</P>
+                </div>
+                <div class="col">
+                    <h3>Contact Us <div class="underline"><span></span></div>
+                    </h3>
+                    <p class="email-id">Email: &nbsp &nbsp &nbsp &nbsp<a
+                            href="mailto: email@gmail.com">email@gmail.com</a></p>
+                    <p class="phone-id">Contact: &nbsp &nbsp <a href="tel: +60123456789">+60123456789</a></p>
+
+                    <h3>Follow Us <div class="underline"><span></span></div>
+                    </h3>
+                    <ul class="social_icons">
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-copyright">
+            <p>Copyright &copy; 2023 Sugar High Bakery.
+                All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

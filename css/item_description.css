@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+:root {
+    --main-color: #583937;
+    --text-color: #171427;
+    --bg-color: #FAEAB1;
+
+}
+.product-box {
+    position: relative;
+
+}
+
+.product-box:hover {
+    padding: 10px;
+    border: 1px solid var(--text-color);
+    transition: 0.4s;
+}
+.product-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    padding-top: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--text-color);
+}
+.price {
+    display: block;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+.add-cart {
+    width: 2.5rem;
+    bottom: 0;
+    right: 0;
+    background: var(--text-color);
+    color: #FAF8F1;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 640px) {
+    .item {
+
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .product-image {
+        width: 100%;
+        background-color: var(--main-color);
+        padding: 10px;
+        border-radius: 10px;
+
+    }
+
+    .desc {
+        display: block;
+        width: 100%;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        font-size: large;
+        text-align: justify;
+
+    }
+
+    .stats {
+        padding-top: 30px;
+        text-align: center;
+        font-weight: 700;
+        font-size: x-large;
+
+    }
+
+}
+
+/* =============================================
+   Tablet and Desktop Styles: greater than 640px
+   =============================================
+*/
+
+@media only screen and (min-width: 481px) {
+    section.container {
+        min-height: 1200px;
+    }
+
+    .item {
+        margin-top: 40px;
+        width: 40%;
+        float: left;
+
+    }
+
+    .product-image {
+        width: 100%;
+        background-color: var(--main-color);
+        padding: 20px;
+
+
+
+    }
+
+    .desc {
+        display: block;
+        width: 60%;
+        float: left;
+        padding: 40px 60px;
+        font-size: large;
+        text-align: justify;
+
+    }
+
+    .stats {
+        padding-top: 50px;
+        text-align: center;
+        font-weight: 700;
+        font-size: x-large;
+
+    }
+}

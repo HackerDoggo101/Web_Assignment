@@ -1,0 +1,204 @@
+@charset "utf-8";
+
+.container #dform{
+   padding: 15px;
+   background-color: rgb(255,230,230);
+   box-sizing: border-box;
+   border: 5px ridge skyblue;
+   border-radius: 25px;
+   
+}
+
+.container #pform{
+   padding: 15px;
+   background-color: rgb(255,230,230);
+   box-sizing: border-box;
+   border: 5px solid black;
+   border-radius: 25px;
+   box-shadow: 15px 15px 10px;
+}
+
+.dinformation{
+   margin: 5px;
+}
+
+li{
+   margin: 2px;
+}
+
+hr{
+   border: 1px solid black;
+   
+}
+
+
+.section-title {
+   font-size: 1.5rem;
+   font-weight: 600;
+   text-align: center;
+   margin-bottom: 1.5rem;
+}
+
+/* Form Layout Styles */
+
+form {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-flow: row wrap;
+   flex-flow: row wrap;
+   
+} 
+
+
+fieldset {
+   -webkit-flex: 1 1 300px;
+   flex: 1 1 300px; 
+   margin: 10px; 
+   padding: 25px; 
+   border:3px solid navy; 
+   background:aliceblue;
+   border-radius: 10px;
+}
+
+div.dinformation ,form div {
+   margin: auto;
+   width: 100%;
+}
+
+legend {
+   color: rgb(255, 200, 200);
+   background-color: rgb(179, 20, 25);
+   border-radius: 5px;
+   border: 2px solid yellowgreen;
+   font-size: 1.25em;
+}
+
+label {
+   display: inline;
+   width: 120px;
+}
+
+
+fieldset#pickupInfo label, fieldset#deliveryInfo label {
+   margin-bottom: 10px;
+   width: 100%;
+}
+
+textarea {
+   display: block;
+   width: 100%;
+   height: 100px;
+}
+
+form input[type="text"], form input[type="email"] ,form input[type="number"]{
+   height: 50px;
+   width: 750px;
+   margin: 10px;;
+
+}
+
+ 
+
+form input[type="radio"]::after{
+   width: 15px;
+   height: 15px;
+   border-radius: 15px;
+   top: -2px;
+   left: -1px;
+   position: relative;
+   background-color: white;
+   content: '';
+   display: inline-block;
+   visibility: visible;
+   border: 2px solid black;
+}
+
+form input[type="radio"]:checked::after{
+   width: 15px;
+   height: 15px;
+   border-radius: 15px;
+   top: -2px;
+   left: -1px;
+   position: relative;
+   background-color: black;
+   content: '';
+   display: inline-block;
+   visibility: visible;
+   border: 2px solid white;
+}
+
+form input[type="submit"] , input[type="reset"] {
+   height: 50px;
+   width: 200px;
+   border-radius: 20px;
+}
+
+form input[type="submit"]:hover , input[type="reset"]:hover {
+   background-color: aqua;
+   cursor: pointer;
+   outline-color: transparent;
+   outline-style:solid;
+   box-shadow: 0 0 0 4px darkblue;
+   transition: 0.7s;
+}
+
+form input#sizeBox {
+   width: 240px;
+}
+
+
+
+
+
+
+/* Validation Styles */
+form input:focus, form textarea:focus , form select:focus{
+   background-color: rgb(255,255,180);
+}
+
+input#nameBox:focus:valid,input#phoneBox:focus:valid,input#emailBox:focus:valid,input#OTPBox:focus:valid {
+   background-color: rgb(220,255,220);
+   background-image: url("/images/okay.png");
+   background-position: right;
+   background-repeat: no-repeat;
+}
+
+input#nameBox:focus:invalid,input#phoneBox:focus:invalid,input#emailBox:focus:invalid,input#OTPBox:focus:invalid{
+   background-color: rgb(255,230,230);
+   background-image: url("/images/warning.png");
+   background-position: right;
+   background-repeat: no-repeat;
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 480px) {
+    
+   .container form input[type="text"] , form input[type="email"] {
+      height: 50px;
+      width: 250px;
+      margin: 10px;
+   }
+
+   form input[type="submit"] , form input[type="reset"] {
+      height: 50px;
+      width: 100px;
+   }
+
+
+
+  
+   
+}
+/* =============================================
+  Tablet and Desktop Styles: greater than 640px
+  =============================================
+*/
+
+@media only screen and (min-width: 481px) {
+   form input[type="text"],input[type="email"] ,input[type="number"]{
+      height: 50px;
+      max-width: 100%;
+      margin: 10px;
+   
+   }
+}

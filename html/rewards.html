@@ -1,0 +1,353 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rewards</title>
+    <link rel="shortcut icon" type="image" href="/images/Logo.png">
+    <link href="/css/reset.css" rel="stylesheet" />
+    <link href="/css/base.css" rel="stylesheet" />
+    <link href="/css/footer.css" rel="stylesheet" />
+    <link href="/css/rewards.css" rel="stylesheet" />
+    <link href="/css/chatbot.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/a0b087c6f7.js" crossorigin="anonymous"></script>
+    <!-- Author:Wong Yee En -->
+
+</head>
+
+<body>
+    <button onclick="topFunction()" id="myBtn"><img src="/images/up-arrow.png"></button>
+    <header>
+        <div class="nav">
+            <div class="top_nav">
+                <div class="icons">
+                    <a href="/html/index.html"><img src="/images/Logo.png" alt="logo" class="logo"></a>
+                    <img src="/images/Banner.png" alt="company banner" class="banner">
+                    <img src=" /images/Cart.png" alt="Cart" class="cart_logo" id="cart-icon">
+                </div>
+
+                <div class="cart">
+                    <h2 class="cart-title">Your Cart</h2>
+                    <!-- content -->
+                    <div class="cart-content">
+
+                    </div>
+                    <!-- Total -->
+                    <div class="total">
+                        <div class="total-title">Total</div>
+                        <div class="total-price">RM0</div>
+                    </div>
+                    <!-- Buy Button -->
+                    <button type="button" class="button-buy" onclick="location.href='payment.html'">Buy Now</button>
+                    <!-- Cart Close -->
+                    <img src="/images/close.png" alt="close icon" id="close-cart" style="width: 15px;">
+                </div>
+
+            </div>
+
+            <nav class="bottom_nav">
+                <a id="navicon" href="#"><img src="/images/navicon.png" alt="" /></a>
+                <ul>
+                    <li>
+                        <a href="/html/index.html">Home</a>
+
+                    </li>
+                    <li>
+                        <a href="#">Menu</a>
+                        <ul class="dropdown">
+                            <li><a href="/html/menu_cakes.html">Cakes</a></li>
+                            <li><a href="/html/menu_custom_cakes.html">Custom Cakes</a></li>
+                            <li><a href="/html/menu_breads.html">Breads</a></li>
+                            <li><a href="/html/menu_pastries.html">Pastries</a></li>
+                            <li><a href="/html/menu_cookies.html">Cookies</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/html/customer_feedback.html">Customer Feedback</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact Us</a>
+                        <ul class="dropdown">
+                            <li><a href="/html/about_us.html">About Us</a></li>
+                            <li><a href="/html/faq.html">FAQs</a></li>
+                            <li><a href="/html/location.html">Location</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">Other Services</a>
+                        <ul class="dropdown">
+                            <li><a href="/html/news&promotions.html">News & Promotions</a></li>
+                            <li><a href="/html/rewards.html">Rewards</a></li>
+                            <li><a href="/html/delivery.html">Delivery</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+        <!-- link to JS -->
+        <script src="/javascript/main.js"></script>
+    </header>
+
+
+
+
+    <!-- THE MAIN PART OF THE BODY IS STORED IN THIS SECTION -->
+    <section class="container">
+        <h1>Rewards</h1>
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide">
+                    <img src="/images/memberCard.png" alt="Member Card">
+                </div>
+                <div class="slide">
+                    <img src="/images/classicMember.png" alt="Classic Member Card" />
+                </div>
+                <div class="slide">
+                    <img src="/images/silverMember.png" alt="Silver Member Card" />
+                </div>
+                <div class="slide">
+                    <img src="/images/goldMember.png" alt="Gold Member Card">
+                </div>
+            </div>
+            <div class="controls">
+                <div class="dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+        <script src="/javascript/rewards.js"></script>
+
+
+
+
+        <!--Image slider end-->
+
+        <!-- Tabs start -->
+        <div class="mytabs">
+            <input type="radio" id="tabfree" name="mytabs" checked="checked">
+            <label for="tabfree">Classic</label>
+            <div class="tab">
+                <h2>Classic Member Card</h2>
+                <br />
+                <div class="cardImg">
+                    <img src="/images/classicMember.png" alt="Classic Card" />
+                </div>
+                <div class="deslist">
+                    <ul>
+                        <li>Our classic member card is free of charge !</li><br>
+                        <li>No expiry date !</li><br />
+                        <li>Enjoy discounts for cookies only !</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <input type="radio" id="tabsilver" name="mytabs">
+            <label for="tabsilver">Silver</label>
+            <div class="tab">
+                <h2>Silver Member Card</h2>
+                <br />
+                <div class="cardImg">
+                    <img src="/images/silverMember.png" alt="Silver Card" />
+                </div>
+                <div class="deslist">
+                    <ul>
+                        <li>Annual fee of RM10 for silver member card !</li><br>
+                        <li>No expiry date !</li><br />
+                        <li>Enjoy discounts for breads and pastries ！</li>
+                    </ul>
+                </div>
+            </div>
+
+            <input type="radio" id="tabgold" name="mytabs">
+            <label for="tabgold">Gold</label>
+            <div class="tab">
+                <h2>Gold Member Card</h2>
+                <br />
+                <div class="cardImg">
+                    <img src="/images/goldMember.png" alt="Gold Card" />
+                </div>
+                <div class="deslist">
+                    <ul>
+                        <li>Annual fee of RM30 for gold member card !</li><br>
+                        <li>No expiry date !</li><br />
+                        <li>Enjoy discounts for all items ！</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Tabs end -->
+
+
+        <!-- Table start -->
+        <div class="tableSection" style="overflow-x: auto;">
+            <table>
+                <colgroup>
+                    <col id="firstCol">
+                    <col id="dataCols" span="3">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th rowspan="2">Membership Types</th>
+                        <th>Classic</th>
+                        <th>Silver</th>
+                        <th>Gold</th>
+                    </tr>
+                    <tr>
+                        <th>RM0<br />per annual</th>
+                        <th>RM10<br />per annual</th>
+                        <th>RM30<br />per annual</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Summary</th>
+                        <td>A good membership option for customers who always buy cookies only</td>
+                        <td>A great membership option for breads and pastries lovers.</td>
+                        <td>An awesome membership option for bakery lovers!</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">Attention: Discounts & Coupons only applicable in physical stores.</td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <th>Products entitled with discounts</th>
+                        <td>Cookies</td>
+                        <td>Breads & Pastries</td>
+                        <td>All products</td>
+                    </tr>
+                    <tr>
+                        <th>Minimum purchase for discounts</th>
+                        <td>RM30</td>
+                        <td>RM50</td>
+                        <td>RM100</td>
+                    </tr>
+                    <tr>
+                        <th>Birthday 2x points</th>
+                        <td>No</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <th>Birthday gift</th>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <th>Points given per purchase</th>
+                        <td>5</td>
+                        <td>8</td>
+                        <td>15</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- Table end -->
+        <!-- Hotspot Image that link users to coupon page ,start-->
+        <div class="coupon">
+            <p>Click The Image Below To View Coupons Now!</p>
+            <a href="/html/coupon.html"><img src="/images/coupon.png" alt="Coupon" /></a>
+        </div>
+        <!-- Hotspot Image that link users to coupon page ,end-->
+        <!-- Sign Up Area Start-->
+        <div class="signup">
+            <img src="/images/gift.png" alt="Gift">
+            <div class="signupDesc">
+                <p>Membership has its privileges, register now for free classic member card !</p>
+                <a href="/html/member_registration.html">Register</a>
+            </div>
+        </div>
+        <!-- Sign Up Area End-->
+
+        <!--Chatbot-->
+        <div class="chatbot">
+            <!-- Header Button -->
+            <button id="chat-btn" class="chat-header">
+                <img src="/images/chat.png" alt="Chat Icon" height="20" />
+                <b>Chatbot</b>
+            </button>
+
+            <!-- Chatbox Body -->
+            <div class="chat-hide">
+                <div class="relative-container">
+                    <div class="absolute-container">
+                        <!-- initial messages -->
+                        <div class="chatbox">
+                            <p id="chat-time"><!-- time --></p>
+                            <p id="botStartMsg" class="botText"><!-- initial messages --></p>
+                        </div>
+
+                        <!-- input section -->
+                        <div class="chat-input">
+                            <div class="chat-input-inner">
+                                <!-- input box -->
+                                <div id="userInput">
+                                    <input type="text" id="textInput" class="inputBox"
+                                        placeholder="Enter your message here..." />
+                                    <p></p>
+                                </div>
+
+                                <!-- send button -->
+                                <div class="chat-send">
+                                    <img src="/images/send.png" alt="Send Icon" height="20" onclick="sendBtn(event)" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- display chatbot replies -->
+                        <div id="chatBar-btm">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="/javascript/chatbot.js"></script>
+    <script src="/javascript/responses.js"></script>
+    
+    <footer class="footer-content">
+        <div class="footer-header">
+            <div class="row">
+                <div class="col">
+                    <img src="/images/Logo.png" class="footer-logo" />
+                    <P>Sugar High Bakery promises a value lifestyle proposition of great variety and quality
+                        food at
+                        affordable prices. The uncompromising quality of food</P>
+                </div>
+                <div class="col">
+                    <h3>Contact Us <div class="underline"><span></span></div>
+                    </h3>
+                    <p class="email-id">Email: &nbsp &nbsp &nbsp &nbsp<a
+                            href="mailto: email@gmail.com">email@gmail.com</a></p>
+                    <p class="phone-id">Contact: &nbsp &nbsp <a href="tel: +60123456789">+60123456789</a></p>
+
+                    <h3>Follow Us <div class="underline"><span></span></div>
+                    </h3>
+                    <ul class="social_icons">
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-copyright">
+            <p>Copyright &copy; 2023 Sugar High Bakery.
+                All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

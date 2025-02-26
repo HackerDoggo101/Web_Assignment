@@ -1,0 +1,418 @@
+/* Author: Wong Yee En */
+@charset "utf-8";
+
+
+section h1 {
+    font-size: 3.5em;
+    color: #583937;
+    margin-bottom: 35px;
+    text-align: center;
+
+}
+
+.slider-container {
+    position: relative;
+    width: 80%;
+    height: 300px;
+    padding-bottom: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.controls {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.dot.active {
+    background-color: #000;
+}
+
+/* Styles for manual slide navigation*/
+
+.navigation-manual {
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.manual-btn {
+    border: 2px solid #40d3dc;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background: #40d3dc;
+}
+
+#radio1:checked~.first {
+    margin-left: 0;
+
+}
+
+#radio2:checked~.first {
+    margin-left: -20%;
+
+}
+
+#radio3:checked~.first {
+    margin-left: -40%;
+
+}
+
+#radio4:checked~.first {
+    margin-left: -60%;
+
+}
+
+/*Styles for automatic navigation*/
+
+.navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 460px;
+}
+
+.navigation-auto div {
+    border: 2px solid #40D3DC;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked~.navigation-auto .auto-btn1 {
+    background: #40D3DC;
+}
+
+#radio2:checked~.navigation-auto .auto-btn2 {
+    background: #40D3DC;
+}
+
+#radio3:checked~.navigation-auto .auto-btn3 {
+    background: #40D3DC;
+}
+
+#radio4:checked~.navigation-auto .auto-btn4 {
+    background: #40D3DC;
+}
+
+/*Tabs Styles*/
+.mytabs {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 50px auto;
+    padding: 25px;
+
+}
+
+.mytabs input[type="radio"] {
+    display: none;
+}
+
+.mytabs label {
+    padding: 25px;
+    background: #AD8E70;
+    font-weight: bold;
+
+
+}
+
+.mytabs .tab {
+    width: 100%;
+    padding: 20px;
+    background: #F4B183;
+    order: 1;
+    display: none;
+
+}
+
+.mytabs .tab h2 {
+    font-size: 2em;
+}
+
+.mytabs input[type='radio']:checked+label+.tab {
+    display: block;
+}
+
+.mytabs input[type="radio"]:checked+label {
+    background: #F4B183;
+}
+
+.deslist>ul>li {
+    background-image: url(/images/bread.png);
+    font-size: 1.2em;
+    text-align: left;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding: 15px 0 20px 84px;
+    list-style: none;
+    margin: 0;
+}
+
+.deslist {
+    float: left;
+}
+
+.cardImg img {
+    width: 30%;
+    float: left;
+    padding-right: 7%;
+    padding-top: 3.4%;
+}
+
+/*Sign Up Banner Styles*/
+.signup {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #F4B183;
+    border-radius: 20px;
+
+}
+
+.signup img {
+    width: 15vmax;
+    height: auto;
+}
+
+.signupDesc {
+    max-width: 50%;
+    padding-left: 20px;
+}
+
+.signup p {
+    font-size: 1.2em;
+    margin-bottom: 15%;
+    line-height: 1.4;
+}
+
+
+.signup a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #fff;
+    background-color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+
+}
+
+.signup a:link {
+    background-color: black;
+}
+
+.signup a:visited {
+    background-color: black;
+}
+
+.signup a:hover {
+    background-color: red;
+}
+
+.signup a:active {
+    background-color: #B05A7A;
+}
+
+
+/* Table Styles */
+
+table {
+    background: #F4B183;
+    border: 5px solid gray;
+    overflow-x: auto;
+
+}
+
+table>th,
+td {
+    border: 3px solid gray;
+    line-height: 1.4;
+    padding: 8px;
+
+}
+
+th {
+    background-color: #413543;
+    color: white;
+    font-weight: normal;
+    font-size: 1.1em;
+}
+
+td {
+    vertical-align: top;
+    font-size: 1.2em;
+}
+
+/* Column Styles */
+col#firstCol {
+    width: 24%;
+}
+
+col.dataCols {
+    width: 19%;
+}
+
+
+/* Table Header Styles */
+
+thead>tr {
+    height: 60px;
+}
+
+thead>tr:first-of-type>th:first-of-type {
+    font-size: 2em;
+}
+
+thead>tr:first-of-type> :not(:first-of-type) {
+    background-color: transparent;
+    color: black;
+}
+
+/* Coupon Styles */
+.coupon {
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom: 5%;
+
+}
+
+.coupon p {
+    border-bottom: 3px solid gray;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2em;
+}
+
+.coupon img {
+
+    margin-top: 5%;
+    height: 300px;
+    width: 40%;
+}
+
+/* Mobile Styles*/
+@media only screen and (max-width: 480px) {
+
+    /*Tab style*/
+    .mytabs {
+        max-width: 99%;
+    }
+
+    .mytabs label {
+        width: 33%;
+    }
+
+    .mytabs .tab h2 {
+        font-size: 1.5em;
+    }
+
+    .cardImg img {
+        width: 100%;
+    }
+
+    /* Coupon styles*/
+    .coupon img {
+        width: 50%;
+        height: 50%;
+    }
+
+    .coupon p {
+        font-size: 1.5em;
+    }
+
+    /* Banner styles*/
+    .highlight-banner {
+        width: 380px;
+    }
+
+    .highlight-banner img {
+        width: 40px;
+        height: 40px;
+        margin-left: 15%;
+
+    }
+
+    .signUpBtn {
+        padding-top: 5%;
+    }
+
+    .signup p {
+        font-size: 15px;
+    }
+
+    section h1 {
+        font-size: 2.2em;
+    }
+
+    /* Table styles */
+    .tableSection:before {
+        content: "**Slide left to view complete table";
+        font-size:1.2em;
+        line-height: 3em;
+    }
+}
